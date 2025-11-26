@@ -7,29 +7,10 @@
     <meta name="description" content="Transform your business with AI and data analytics. Expert consultation, machine learning, and data engineering services in Nairobi, Kenya.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Color Palette: Navy Blue (#0A1931) and Gold (#FFD700) */
-        .gradient-bg { background: linear-gradient(135deg, #0A1931 0%, #173B6F 100%); }
-        .gold-text { color: #FFD700; }
-        .gold-bg { background-color: #FFD700; }
-        .navy-bg { background-color: #0A1931; }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%); }
         .fade-in { animation: fadeIn 0.5s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .hidden { display: none !important; }
-
-        /* Custom style for industry hover effect */
-        .industry-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .industry-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        /* NEW: Style matching the screenshot for industry cards */
-        .industry-screenshot-card {
-            border-left: 5px solid #FFD700; /* Gold left border */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
     </style>
 </head>
 <body class="font-sans antialiased">
@@ -42,12 +23,12 @@
                 </div>
                 
                 <nav class="hidden md:flex items-center gap-6">
-                    <button onclick="showPage('home')" class="nav-link font-semibold text-gray-700 hover:text-[#0A1931] transition">Home</button>
-                    <button onclick="showPage('about')" class="nav-link font-semibold text-gray-700 hover:text-[#0A1931] transition">About</button>
-                    <button onclick="showPage('services')" class="nav-link font-semibold text-gray-700 hover:text-[#0A1931] transition">Services</button>
-                    <button onclick="showPage('blog')" class="nav-link font-semibold text-gray-700 hover:text-[#0A1931] transition">Blog</button>
-                    <button onclick="showPage('contact')" class="nav-link font-semibold text-gray-700 hover:text-[#0A1931] transition">Contact</button>
-                    <button onclick="showPage('contact')" class="navy-bg text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#173B6F] transition">Get Started</button>
+                    <button onclick="showPage('home')" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition">Home</button>
+                    <button onclick="showPage('about')" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition">About</button>
+                    <button onclick="showPage('services')" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition">Services</button>
+                    <button onclick="showPage('blog')" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition">Blog</button>
+                    <button onclick="showPage('contact')" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition">Contact</button>
+                    <button onclick="showPage('payment')" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Get Started</button>
                 </nav>
 
                 <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-2xl">☰</button>
@@ -59,7 +40,7 @@
                 <button onclick="showPage('services'); toggleMobileMenu()" class="block w-full text-left px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-50">Services</button>
                 <button onclick="showPage('blog'); toggleMobileMenu()" class="block w-full text-left px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-50">Blog</button>
                 <button onclick="showPage('contact'); toggleMobileMenu()" class="block w-full text-left px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-50">Contact</button>
-                <button onclick="showPage('contact'); toggleMobileMenu()" class="block w-full text-left px-4 py-2 rounded-lg font-semibold bg-[#0A1931]/10 text-[#0A1931]">Get Started</button>
+                <button onclick="showPage('payment'); toggleMobileMenu()" class="block w-full text-left px-4 py-2 rounded-lg font-semibold bg-blue-50 text-blue-600">Get Started</button>
             </nav>
         </div>
     </header>
@@ -72,8 +53,8 @@
                         <h1 class="text-5xl font-bold mb-6 leading-tight">Transform Your Business with Data & AI</h1>
                         <p class="text-xl mb-8 text-blue-100">AxiaAnalytics delivers cutting-edge AI solutions and data analytics services that drive real business results in Nairobi and beyond.</p>
                         <div class="flex gap-4 flex-wrap">
-                            <button onclick="showPage('contact')" class="gold-bg text-[#0A1931] px-8 py-3 rounded-lg font-semibold hover:bg-[#FFC400] transition">Get Started</button>
-                            <button onclick="showPage('services')" class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#0A1931] transition">Our Services</button>
+                            <button onclick="showPage('contact')" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">Get Started</button>
+                            <button onclick="showPage('services')" class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">Our Services</button>
                         </div>
                     </div>
                     <div class="hidden md:block">
@@ -91,233 +72,97 @@
         </section>
 
         <section class="py-20 px-4 bg-gray-50">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-4">Our Core Services</h2>
-                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Comprehensive AI and data solutions designed to accelerate your digital transformation journey</p>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                        <div class="text-4xl mb-4 gold-text">👥</div>
-                        <h3 class="text-xl font-bold mb-3">AI Expert Consultation</h3>
-                        <p class="text-gray-600 mb-4">Strategic guidance, roadmapping, and feasibility studies from industry-leading AI veterans.</p>
-                        <button onclick="showPage('services')" class="text-[#0A1931] font-semibold">Learn More</button>
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-100">
+                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 hover:bg-gray-50 transition" onclick="toggleAccordion('industry-finance')">
+                            <span>Financial Services & Banking</span>
+                            <span id="icon-industry-finance" class="text-2xl transform transition-transform duration-300">+</span>
+                        </button>
+                        <div id="industry-finance" class="hidden overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="p-6 pt-0 text-gray-600">
+                                <p>Leveraging AI for fraud detection, risk modeling, and personalized customer banking experiences. Our solutions drive compliance and enhance profitability in the financial sector.</p>
+                                <ul class="list-disc pl-6 mt-4 space-y-2">
+                                    <li>Credit Risk Scoring with Machine Learning</li>
+                                    <li>Automated Anti-Money Laundering (AML) checks</li>
+                                    <li>Customer Churn Prediction</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                        <div class="text-4xl mb-4 gold-text">🤖</div>
-                        <h3 class="text-xl font-bold mb-3">AI Optimized Solutions</h3>
-                        <p class="text-gray-600 mb-4">Development and deployment of custom AI agents and intelligent workflow automation systems.</p>
-                        <button onclick="showPage('services')" class="text-[#0A1931] font-semibold">Learn More</button>
+
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-100">
+                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 hover:bg-gray-50 transition" onclick="toggleAccordion('industry-logistics')">
+                            <span>Logistics & Supply Chain</span>
+                            <span id="icon-industry-logistics" class="text-2xl transform transition-transform duration-300">+</span>
+                        </button>
+                        <div id="industry-logistics" class="hidden overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="p-6 pt-0 text-gray-600">
+                                <p>Optimizing routes, managing inventory, and predicting demand to create highly efficient and resilient supply chains. We minimize operational costs through intelligent automation.</p>
+                                <ul class="list-disc pl-6 mt-4 space-y-2">
+                                    <li>Route Optimization Algorithms</li>
+                                    <li>Predictive Maintenance for Fleets</li>
+                                    <li>Warehouse Robotics Integration</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                        <div class="text-4xl mb-4 gold-text">💡</div>
-                        <h3 class="text-xl font-bold mb-3">AI Strategy Development</h3>
-                        <p class="text-gray-600 mb-4">Creating a clear, business-aligned strategy for AI adoption and value realization across your organization.</p>
-                        <button onclick="showPage('services')" class="text-[#0A1931] font-semibold">Learn More</button>
+
+                    <div class="bg-white rounded-xl shadow-lg border border-gray-100">
+                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 hover:bg-gray-50 transition" onclick="toggleAccordion('industry-healthcare')">
+                            <span>Healthcare & Pharma</span>
+                            <span id="icon-industry-healthcare" class="text-2xl transform transition-transform duration-300">+</span>
+                        </button>
+                        <div id="industry-healthcare" class="hidden overflow-hidden transition-all duration-500 ease-in-out">
+                            <div class="p-6 pt-0 text-gray-600">
+                                <p>Enhancing patient care, accelerating diagnostics, and streamlining administrative tasks with data science. Our solutions adhere to strict data privacy standards.</p>
+                                <ul class="list-disc pl-6 mt-4 space-y-2">
+                                    <li>AI-assisted Medical Imaging Analysis</li>
+                                    <li>Electronic Health Record (EHR) Data Analytics</li>
+                                    <li>Personalized Treatment Planning</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                        <div class="text-4xl mb-4 gold-text">🛠️</div>
-                        <h3 class="text-xl font-bold mb-3">AI Implementation Support</h3>
-                        <p class="text-gray-600 mb-4">Hands-on technical assistance for seamless integration of AI models into your existing infrastructure.</p>
-                        <button onclick="showPage('services')" class="text-[#0A1931] font-semibold">Learn More</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                        <div class="text-4xl mb-4 gold-text">🧠</div>
-                        <h3 class="text-xl font-bold mb-3">AI & Predictive Modeling</h3>
-                        <p class="text-gray-600 mb-4">Custom ML models, predictive analytics, and intelligent solutions for forecasting and decision-making.</p>
-                        <button onclick="showPage('services')" class="text-[#0A1931] font-semibold">Learn More</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                        <div class="text-4xl mb-4 gold-text">📊</div>
-                        <h3 class="text-xl font-bold mb-3">Data Engineering & Strategy</h3>
-                        <p class="text-gray-600 mb-4">Build robust data pipelines, scalable cloud architecture, and reliable data governance frameworks.</p>
-                        <button onclick="showPage('services')" class="text-[#0A1931] font-semibold">Learn More</button>
-                    </div>
-                     <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                        <div class="text-4xl mb-4 gold-text">📈</div>
-                        <h3 class="text-xl font-bold mb-3">Business Intelligence & Viz</h3>
-                        <p class="text-gray-600 mb-4">Interactive dashboards and real-time analytics for comprehensive reporting and strategic oversight.</p>
-                        <button onclick="showPage('services')" class="text-[#0A1931] font-semibold">Learn More</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                        <div class="text-4xl mb-4 gold-text">⚖️</div>
-                        <h3 class="text-xl font-bold mb-3">AI Ethics & Governance</h3>
-                        <p class="text-gray-600 mb-4">Developing policies, audits, and frameworks to ensure your AI systems are fair, transparent, and compliant with regulations.</p>
-                        <button onclick="showPage('services')" class="text-[#0A1931] font-semibold">Learn More</button>
-                    </div>
-                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
-                        <div class="text-4xl mb-4 gold-text">☁️</div>
-                        <h3 class="text-xl font-bold mb-3">Cloud Data Migration & Optimization</h3>
-                        <p class="text-gray-600 mb-4">Seamlessly moving your data infrastructure to the cloud (AWS, Azure, GCP) and optimizing it for performance and cost.</p>
-                        <button onclick="showPage('services')" class="text-[#0A1931] font-semibold">Learn More</button>
-                    </div>
+
                 </div>
             </div>
         </section>
 
-                <section class="py-16 px-4 bg-white">
+        <section class="py-20 px-4">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-12">Industries We Transform</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-                    <div class="industry-card industry-screenshot-card bg-gray-50 p-6 rounded-xl">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="text-3xl gold-text">🏛️</div>
-                            <h3 class="font-bold text-xl text-[#0A1931]">Finance & Banking</h3>
-                        </div>
-                        <ul class="list-none ml-0 text-gray-700 space-y-2 text-sm">
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Fraud Detection:** Deploying real-time anomaly detection models to minimize financial risk.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Credit Scoring:** Developing advanced, non-traditional scoring models for better lending decisions.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Regulatory Reporting:** Automating compliance and regulatory report generation using AI.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Personalized Banking:** Utilizing customer data to offer hyper-personalized investment and product advice.</li>
-                        </ul>
-                    </div>
-
-                    <div class="industry-card industry-screenshot-card bg-gray-50 p-6 rounded-xl">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="text-3xl gold-text">🏥</div>
-                            <h3 class="font-bold text-xl text-[#0A1931]">Healthcare</h3>
-                        </div>
-                        <ul class="list-none ml-0 text-gray-700 space-y-2 text-sm">
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Predictive Diagnostics:** Building models to forecast patient outcomes and disease progression.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Resource Optimization:** AI-driven scheduling for hospital staff and equipment utilization.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Patient Data Analysis:** Securely analyzing clinical data for research and operational efficiency.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Telemedicine Integration:** Developing intelligent systems to enhance remote patient monitoring and care.</li>
-                        </ul>
-                    </div>
-
-                    <div class="industry-card industry-screenshot-card bg-gray-50 p-6 rounded-xl">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="text-3xl gold-text">🚛</div>
-                            <h3 class="font-bold text-xl text-[#0A1931]">Logistics & Supply Chain</h3>
-                        </div>
-                        <ul class="list-none ml-0 text-gray-700 space-y-2 text-sm">
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Route Optimization:** Dynamic route planning using real-time traffic and delivery data to cut costs.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Inventory Forecasting:** Predictive modeling to optimize stock levels and minimize warehousing expenses.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Demand Sensing:** Utilizing external factors (weather, events) to accurately forecast product demand.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Autonomous Operations:** Implementing AI for automated warehouse management and tracking.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="industry-card industry-screenshot-card bg-gray-50 p-6 rounded-xl">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="text-3xl gold-text">🏭</div>
-                            <h3 class="font-bold text-xl text-[#0A1931]">Manufacturing</h3>
-                        </div>
-                        <ul class="list-none ml-0 text-gray-700 space-y-2 text-sm">
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Predictive Maintenance:** Using sensor data to anticipate equipment failures before they occur.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Quality Control:** Implementing Computer Vision AI for automated defect detection on production lines.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Production Scheduling:** Optimizing complex manufacturing schedules to maximize throughput.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Energy Optimization:** AI systems that monitor and adjust machine usage to reduce energy consumption.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="industry-card industry-screenshot-card bg-gray-50 p-6 rounded-xl">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="text-3xl gold-text">🛍️</div>
-                            <h3 class="font-bold text-xl text-[#0A1931]">E-Commerce & Retail</h3>
-                        </div>
-                        <ul class="list-none ml-0 text-gray-700 space-y-2 text-sm">
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Personalized Recommendations:** Building AI engines that drive sales through targeted product suggestions.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Customer Segmentation:** Using clustering techniques to better understand buying behavior and marketing ROI.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Dynamic Pricing:** Implementing algorithms that adjust prices in real-time based on competitor data and demand.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Churn Prediction:** Identifying customers likely to leave and automating retention campaigns.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="industry-card industry-screenshot-card bg-gray-50 p-6 rounded-xl">
-                        <div class="flex items-center gap-4 mb-4">
-                            <div class="text-3xl gold-text">🔌</div>
-                            <h3 class="font-bold text-xl text-[#0A1931]">Energy & Utilities</h3>
-                        </div>
-                        <ul class="list-none ml-0 text-gray-700 space-y-2 text-sm">
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Grid Load Forecasting:** Predicting energy consumption to optimize power generation and distribution.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Asset Management:** Using AI to monitor the health of remote assets like pipelines and wind turbines.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Smart Meter Data Analysis:** Processing large volumes of usage data for billing accuracy and consumer insights.</li>
-                            <li class="flex items-start"><span class="text-gold-text mr-2 font-bold">•</span> **Renewable Energy Integration:** Optimizing the intermittent power flow from solar and wind resources.</li>
-                        </ul>
-                    </div>
+                <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12 text-white">
+                    <div class="text-sm font-semibold mb-2 text-purple-200">CASE STUDY</div>
+                    <h2 class="text-3xl font-bold mb-4">80% Reduction in Manual Processing</h2>
+                    <p class="text-lg mb-6 text-purple-100">How we helped a leading Kenyan logistics company automate operations, saving 200+ hours per month.</p>
+                    <button onclick="showPage('blog')" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition">Read Full Story</button>
                 </div>
             </div>
         </section>
 
-        <section class="py-20 px-4 gradient-bg text-white">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-12 gold-text">Hear From Our Clients</h2>
-                <div id="testimonial-slider" class="max-w-4xl mx-auto">
-                    
-                    <div id="testimonial-1" class="testimonial-item fade-in">
-                        <blockquote class="text-2xl italic mb-6">"AxiaAnalytics helped us streamline our material procurement process with predictive analytics. We saw a **25% efficiency gain** in our supply chain."</blockquote>
-                        <p class="font-bold text-xl">- Struchem Africa Ltd (Construction)</p>
-                    </div>
-                    
-                    <div id="testimonial-2" class="testimonial-item fade-in hidden">
-                        <blockquote class="text-2xl italic mb-6">"Their work on customer sentiment analysis transformed how we approach client feedback. We're now making **data-driven decisions** on service improvements, leading to higher retention."</blockquote>
-                        <p class="font-bold text-xl">- Wishconsultancy (Consumer Service)</p>
-                    </div>
-                    
-                    <div id="testimonial-3" class="testimonial-item fade-in hidden">
-                        <blockquote class="text-2xl italic mb-6">"We leveraged their data engineering expertise to build a real-time monitoring dashboard for our retail sites. This has been crucial for **optimizing fuel distribution** and reducing downtime."</blockquote>
-                        <p class="font-bold text-xl">- Vivo Energy Kenya (Fuel Retail)</p>
-                    </div>
-                    
-                    <div id="testimonial-4" class="testimonial-item fade-in hidden">
-                        <blockquote class="text-2xl italic mb-6">"Implementing their solution for warehouse inventory tracking was seamless. It has drastically cut down on manual errors and improved our **overall stock accuracy**."</div>
-                        <p class="font-bold text-xl">- KINSON LIMITED (Flooring)</p>
-                    </div>
-                    
-                    <div id="testimonial-5" class="testimonial-item fade-in hidden">
-                        <blockquote class="text-2xl italic mb-6">"As an NGO, optimizing resource allocation is key. AxiaAnalytics provided a model that helps us forecast community needs, ensuring our **aid reaches the right people at the right time**."</div>
-                        <p class="font-bold text-xl">- Fadhila Kenya (NGO)</p>
-                    </div>
-
-                    <div id="testimonial-6" class="testimonial-item fade-in hidden">
-                        <blockquote class="text-2xl italic mb-6">"Their business intelligence dashboards gave us clarity into our sales channels for the first time. We can now identify high-performing products and **target our marketing effectively**."</blockquote>
-                        <p class="font-bold text-xl">- MSENGWEDU ENTERPRISES (General Merchant)</p>
-                    </div>
-                    
-                    <div id="testimonial-nav" class="flex justify-center mt-10 gap-3">
-                        <button onclick="showTestimonial(1)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button onclick="showTestimonial(2)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button onclick="showTestimonial(3)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button onclick="showTestimonial(4)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button onclick="showTestimonial(5)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button onclick="showTestimonial(6)" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+        <section class="py-20 px-4 bg-gray-100">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-12">Hear From Our Clients</h2>
+                <div class="bg-white p-10 rounded-2xl shadow-xl border-t-4 border-blue-600 fade-in">
+                    <p class="text-2xl italic font-serif text-gray-700 mb-8">
+                        "AxiaAnalytics delivered a predictive model that has been a game-changer for our inventory management. The team was highly professional and the results exceeded our expectations."
+                    </p>
+                    <div class="text-right">
+                        <p class="text-xl font-bold text-gray-900">David Mwangi</p>
+                        <p class="text-md text-blue-600">Operations Director, Leading Logistics Firm</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="py-20 px-4">
-            <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-r from-[#0A1931] to-[#173B6F] rounded-2xl p-8 text-white">
-                    <div class="text-sm font-semibold mb-2 gold-text">CASE STUDY 1</div>
-                    <h2 class="text-xl font-bold mb-4">80% Reduction in Manual Processing</h2>
-                    <p class="text-sm mb-6 text-blue-100">We helped a leading Kenyan logistics company automate operations, saving 200+ hours per month.</p>
-                    <button onclick="showPage('blog')" class="gold-bg text-[#0A1931] px-4 py-2 rounded-lg font-semibold hover:bg-[#FFC400] transition">Read Full Story</button>
-                </div>
-
-                <div class="bg-gradient-to-r from-[#0A1931] to-[#173B6F] rounded-2xl p-8 text-white">
-                    <div class="text-sm font-semibold mb-2 gold-text">CASE STUDY 2</div>
-                    <h2 class="text-xl font-bold mb-4">Risk Management for Financial Services</h2>
-                    <p class="text-sm mb-6 text-blue-100">Implemented a predictive model that reduced credit default risk by 15% for a micro-finance institution.</p>
-                    <button onclick="showPage('blog')" class="gold-bg text-[#0A1931] px-4 py-2 rounded-lg font-semibold hover:bg-[#FFC400] transition">Read Full Story</button>
-                </div>
-
-                <div class="bg-gradient-to-r from-[#0A1931] to-[#173B6F] rounded-2xl p-8 text-white">
-                    <div class="text-sm font-semibold mb-2 gold-text">CASE STUDY 3</div>
-                    <h2 class="text-xl font-bold mb-4">Supply Chain Optimization</h2>
-                    <p class="text-sm mb-6 text-blue-100">Designed a demand forecasting engine that led to a 30% reduction in stockouts for a major retailer.</p>
-                    <button onclick="showPage('blog')" class="gold-bg text-[#0A1931] px-4 py-2 rounded-lg font-semibold hover:bg-[#FFC400] transition">Read Full Story</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 px-4 bg-gray-50">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
                 <p class="text-xl text-gray-600 mb-8">Let's discuss how AI and data analytics can drive your next breakthrough</p>
                 <div class="flex gap-4 justify-center flex-wrap">
-                    <button onclick="showPage('contact')" class="navy-bg text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#173B6F] transition">Schedule Consultation</button>
-                    <button onclick="showPage('contact')" class="border-2 border-[#0A1931] text-[#0A1931] px-8 py-4 rounded-lg font-semibold hover:bg-[#0A1931]/5 transition">Contact Us</button>
+                    <button onclick="showPage('contact')" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition">Schedule Consultation</button>
+                    <button onclick="showPage('payment')" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition">View Packages</button>
                 </div>
             </div>
         </section>
@@ -329,7 +174,7 @@
                 <h1 class="text-5xl font-bold mb-8">About AxiaAnalytics</h1>
                 <div class="grid md:grid-cols-2 gap-12 mb-20">
                     <div>
-                        <h2 class="text-3xl font-bold mb-6 text-[#0A1931]">Our Story</h2>
+                        <h2 class="text-3xl font-bold mb-6 text-blue-600">Our Story</h2>
                         <p class="text-lg text-gray-700 mb-4">AxiaAnalytics was founded with a vision to democratize AI and data analytics for businesses across Africa. Based in Nairobi, Kenya, we recognized the transformative power of data-driven decision making.</p>
                         <p class="text-lg text-gray-700 mb-4">What started as a small consultancy has grown into a full-service AI and data analytics firm, serving clients across industries.</p>
                         <p class="text-lg text-gray-700">Today, we're at the forefront of Africa's AI revolution, helping businesses leverage cutting-edge technology.</p>
@@ -337,29 +182,29 @@
                     <div class="gradient-bg rounded-2xl p-8 text-white">
                         <h3 class="text-2xl font-bold mb-6">By The Numbers</h3>
                         <div class="space-y-6">
-                            <div><div class="text-4xl font-bold mb-2 gold-text">100+</div><div class="text-blue-100">Projects Completed</div></div>
-                            <div><div class="text-4xl font-bold mb-2 gold-text">50+</div><div class="text-blue-100">Enterprise Clients</div></div>
-                            <div><div class="text-4xl font-bold mb-2 gold-text">15+</div><div class="text-blue-100">Industries Served</div></div>
-                            <div><div class="text-4xl font-bold mb-2 gold-text">95%</div><div class="text-blue-100">Client Satisfaction</div></div>
+                            <div><div class="text-4xl font-bold mb-2">100+</div><div class="text-blue-100">Projects Completed</div></div>
+                            <div><div class="text-4xl font-bold mb-2">50+</div><div class="text-blue-100">Enterprise Clients</div></div>
+                            <div><div class="text-4xl font-bold mb-2">15+</div><div class="text-blue-100">Industries Served</div></div>
+                            <div><div class="text-4xl font-bold mb-2">95%</div><div class="text-blue-100">Client Satisfaction</div></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8 mb-20">
                     <div class="bg-blue-50 p-8 rounded-xl">
-                        <h2 class="text-3xl font-bold mb-4 text-[#0A1931]">Our Mission</h2>
+                        <h2 class="text-3xl font-bold mb-4 text-blue-600">Our Mission</h2>
                         <p class="text-lg text-gray-700">To empower businesses with intelligent, data-driven solutions that unlock growth, optimize operations, and create competitive advantages.</p>
                     </div>
-                    <div class="bg-yellow-50 p-8 rounded-xl">
-                        <h2 class="text-3xl font-bold mb-4 gold-text">Our Vision</h2>
+                    <div class="bg-purple-50 p-8 rounded-xl">
+                        <h2 class="text-3xl font-bold mb-4 text-purple-600">Our Vision</h2>
                         <p class="text-lg text-gray-700">To be Africa's leading AI and analytics partner, recognized for innovation, impact, and transforming businesses through technology.</p>
                     </div>
                 </div>
 
                 <h2 class="text-4xl font-bold mb-12 text-center">Our Values</h2>
                 <div class="grid md:grid-cols-4 gap-6 mb-20">
-                    <div class="text-center"><div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-[#0A1931]">✓</div><h3 class="text-xl font-bold mb-2">Excellence</h3><p class="text-gray-600">Exceptional quality</p></div>
-                    <div class="text-center"><div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl gold-text">🧠</div><h3 class="text-xl font-bold mb-2">Innovation</h3><p class="text-gray-600">Cutting-edge tech</p></div>
+                    <div class="text-center"><div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">✓</div><h3 class="text-xl font-bold mb-2">Excellence</h3><p class="text-gray-600">Exceptional quality</p></div>
+                    <div class="text-center"><div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🧠</div><h3 class="text-xl font-bold mb-2">Innovation</h3><p class="text-gray-600">Cutting-edge tech</p></div>
                     <div class="text-center"><div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🤝</div><h3 class="text-xl font-bold mb-2">Partnership</h3><p class="text-gray-600">Lasting relationships</p></div>
                     <div class="text-center"><div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">💡</div><h3 class="text-xl font-bold mb-2">Impact</h3><p class="text-gray-600">Measurable value</p></div>
                 </div>
@@ -374,92 +219,32 @@
                 <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">Comprehensive AI and data solutions designed to transform your business</p>
 
                 <section class="mb-16">
-                    <div class="bg-gradient-to-r from-blue-50 to-yellow-50 rounded-2xl p-10">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-10">
                         <div class="flex items-start gap-6 mb-6">
-                            <div class="text-4xl gold-text">👥</div>
-                            <div><h2 class="text-3xl font-bold mb-3">AI Expert Consultation</h2><p class="text-lg text-gray-700">Strategic guidance, roadmapping, and feasibility studies from industry-leading AI veterans.</p></div>
+                            <div class="text-4xl">🧠</div>
+                            <div><h2 class="text-3xl font-bold mb-3">AI & Machine Learning Solutions</h2><p class="text-lg text-gray-700">Custom ML models, predictive analytics, and intelligent automation.</p></div>
                         </div>
-                        <button onclick="showPage('contact')" class="navy-bg text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#173B6F] transition">Request Consultation</button>
+                        <button onclick="showPage('contact')" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Request Consultation</button>
                     </div>
                 </section>
 
                 <section class="mb-16">
-                    <div class="bg-gradient-to-r from-yellow-50 to-pink-50 rounded-2xl p-10">
+                    <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-10">
                         <div class="flex items-start gap-6 mb-6">
-                            <div class="text-4xl gold-text">🤖</div>
-                            <div><h2 class="text-3xl font-bold mb-3">AI Optimized Solutions</h2><p class="text-lg text-gray-700">Development and deployment of custom AI agents and intelligent workflow automation systems.</p></div>
+                            <div class="text-4xl">📊</div>
+                            <div><h2 class="text-3xl font-bold mb-3">Data Engineering & Architecture</h2><p class="text-lg text-gray-700">Build robust data pipelines and scalable infrastructure.</p></div>
                         </div>
-                        <button onclick="showPage('contact')" class="gold-bg text-[#0A1931] px-6 py-3 rounded-lg font-semibold hover:bg-[#FFC400] transition">Request Consultation</button>
+                        <button onclick="showPage('contact')" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">Request Consultation</button>
                     </div>
                 </section>
 
                 <section class="mb-16">
-                    <div class="bg-gradient-to-r from-blue-50 to-yellow-50 rounded-2xl p-10">
+                    <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-10">
                         <div class="flex items-start gap-6 mb-6">
-                            <div class="text-4xl gold-text">💡</div>
-                            <div><h2 class="text-3xl font-bold mb-3">AI Strategy Development</h2><p class="text-lg text-gray-700">Creating a clear, business-aligned strategy for AI adoption and value realization across your organization.</p></div>
+                            <div class="text-4xl">📈</div>
+                            <div><h2 class="text-3xl font-bold mb-3">Business Intelligence & Dashboards</h2><p class="text-lg text-gray-700">Transform data into actionable insights with interactive dashboards.</p></div>
                         </div>
-                        <button onclick="showPage('contact')" class="navy-bg text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#173B6F] transition">Request Consultation</button>
-                    </div>
-                </section>
-                
-                <section class="mb-16">
-                    <div class="bg-gradient-to-r from-yellow-50 to-pink-50 rounded-2xl p-10">
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="text-4xl gold-text">🛠️</div>
-                            <div><h2 class="text-3xl font-bold mb-3">AI Implementation Support</h2><p class="text-lg text-gray-700">Hands-on technical assistance for seamless integration of AI models into your existing infrastructure.</p></div>
-                        </div>
-                        <button onclick="showPage('contact')" class="gold-bg text-[#0A1931] px-6 py-3 rounded-lg font-semibold hover:bg-[#FFC400] transition">Request Consultation</button>
-                    </div>
-                </section>
-
-                 <section class="mb-16">
-                    <div class="bg-gradient-to-r from-blue-50 to-yellow-50 rounded-2xl p-10">
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="text-4xl gold-text">🧠</div>
-                            <div><h2 class="text-3xl font-bold mb-3">AI & Predictive Modeling</h2><p class="text-lg text-gray-700">Custom machine learning models, predictive analytics, and intelligent automation.</p></div>
-                        </div>
-                        <button onclick="showPage('contact')" class="navy-bg text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#173B6F] transition">Request Consultation</button>
-                    </div>
-                </section>
-
-                <section class="mb-16">
-                    <div class="bg-gradient-to-r from-yellow-50 to-pink-50 rounded-2xl p-10">
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="text-4xl gold-text">📊</div>
-                            <div><h2 class="text-3xl font-bold mb-3">Data Engineering & Architecture</h2><p class="text-lg text-gray-700">Build robust data pipelines, scalable cloud architecture, and data governance frameworks.</p></div>
-                        </div>
-                        <button onclick="showPage('contact')" class="gold-bg text-[#0A1931] px-6 py-3 rounded-lg font-semibold hover:bg-[#FFC400] transition">Request Consultation</button>
-                    </div>
-                </section>
-                 
-                 <section class="mb-16">
-                    <div class="bg-gradient-to-r from-blue-50 to-yellow-50 rounded-2xl p-10">
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="text-4xl gold-text">📈</div>
-                            <div><h2 class="text-3xl font-bold mb-3">Business Intelligence & Dashboards</h2><p class="text-lg text-gray-700">Transform raw data into actionable insights with interactive dashboards and visualizations.</p></div>
-                        </div>
-                        <button onclick="showPage('contact')" class="navy-bg text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#173B6F] transition">Request Consultation</button>
-                    </div>
-                </section>
-
-                <section class="mb-16">
-                    <div class="bg-gradient-to-r from-yellow-50 to-pink-50 rounded-2xl p-10">
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="text-4xl gold-text">⚖️</div>
-                            <div><h2 class="text-3xl font-bold mb-3">AI Ethics & Governance</h2><p class="text-lg text-gray-700">Developing policies, audits, and frameworks to ensure your AI systems are fair, transparent, and compliant with regulations.</p></div>
-                        </div>
-                        <button onclick="showPage('contact')" class="gold-bg text-[#0A1931] px-6 py-3 rounded-lg font-semibold hover:bg-[#FFC400] transition">Request Consultation</button>
-                    </div>
-                </section>
-
-                <section class="mb-16">
-                    <div class="bg-gradient-to-r from-blue-50 to-yellow-50 rounded-2xl p-10">
-                        <div class="flex items-start gap-6 mb-6">
-                            <div class="text-4xl gold-text">☁️</div>
-                            <div><h2 class="text-3xl font-bold mb-3">Cloud Data Migration & Optimization</h2><p class="text-lg text-gray-700">Seamlessly moving your data infrastructure to the cloud (AWS, Azure, GCP) and optimizing it for performance and cost.</p></div>
-                        </div>
-                        <button onclick="showPage('contact')" class="navy-bg text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#173B6F] transition">Request Consultation</button>
+                        <button onclick="showPage('contact')" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Request Consultation</button>
                     </div>
                 </section>
             </div>
@@ -474,9 +259,9 @@
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden">
-                        <div class="h-48 bg-gradient-to-br from-[#173B6F] to-[#FFD700]"></div>
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-600"></div>
                         <div class="p-6">
-                            <span class="text-sm font-semibold navy-bg text-white px-3 py-1 rounded-full">AI Trends</span>
+                            <span class="text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">AI Trends</span>
                             <h2 class="text-2xl font-bold my-3">The Rise of AI Agents in Enterprise Workflows</h2>
                             <p class="text-gray-600 mb-4">Discover how autonomous AI agents are transforming business operations.</p>
                             <span class="text-sm text-gray-500">Nov 15, 2025</span>
@@ -484,9 +269,9 @@
                     </article>
 
                     <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition overflow-hidden">
-                        <div class="h-48 bg-gradient-to-br from-[#FFD700] to-[#173B6F]"></div>
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-600"></div>
                         <div class="p-6">
-                            <span class="text-sm font-semibold gold-text gold-bg/20 px-3 py-1 rounded-full">Data Strategy</span>
+                            <span class="text-sm font-semibold text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Data Strategy</span>
                             <h2 class="text-2xl font-bold my-3">Building a Data-Driven Culture</h2>
                             <p class="text-gray-600 mb-4">Transform your company into a data-driven powerhouse.</p>
                             <span class="text-sm text-gray-500">Nov 10, 2025</span>
@@ -522,22 +307,19 @@
                                 <label class="block text-sm font-semibold mb-2">Service Interest</label>
                                 <select name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg">
                                     <option value="">Select a service</option>
-                                    <option value="ai-consult">AI Expert Consultation</option>
-                                    <option value="ai-optimize">AI Optimized Solutions</option>
-                                    <option value="ai-strategy">AI Strategy Development</option>
-                                    <option value="ai-support">AI Implementation Support</option>
-                                    <option value="ai-ml">AI & Predictive Modeling</option>
-                                    <option value="data-engineering">Data Engineering & Strategy</option>
-                                    <option value="business-intelligence">Business Intelligence & Viz</option>
-                                    <option value="ai-ethics">AI Ethics & Governance (NEW)</option>
-                                    <option value="cloud-migration">Cloud Data Migration & Optimization (NEW)</option>
+                                    <option value="ai-ml">AI & Machine Learning</option>
+                                    <option value="data-engineering">Data Engineering</option>
+                                    <option value="business-intelligence">Business Intelligence</option>
+                                    <option value="automation">Process Automation</option>
+                                    <option value="ai-agents">AI Agent Workflows</option>
+                                    <option value="consultation">Consultation Services</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Message *</label>
                                 <textarea name="message" required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg"></textarea>
                             </div>
-                            <button type="submit" class="w-full navy-bg text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#173B6F] transition">Send Message</button>
+                            <button type="submit" class="w-full bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition">Send Message</button>
                         </form>
                     </div>
 
@@ -555,7 +337,7 @@
                                 </div>
                                 <div class="flex items-start gap-4">
                                     <span class="text-2xl">✉️</span>
-                                    <div><div class="font-semibold mb-1">Email</div><a href="mailto:Axiaanalyticsglobal@gmail.com" class="text-blue-100 hover:text-white transition">Axiaanalyticsglobal@gmail.com</a></div>
+                                    <div><div class="font-semibold mb-1">Email</div><a href="mailto:contact@axiaanalytics.com" class="text-blue-100 hover:text-white transition">contact@axiaanalytics.com</a></div>
                                 </div>
                             </div>
                             <div class="mt-8 pt-8 border-t border-white/20">
@@ -572,9 +354,102 @@
         </div>
     </div>
 
-    <div id="page-payment" class="page hidden">...</div>
-    <div id="page-privacy" class="page hidden">...</div>
-    <div id="page-terms" class="page hidden">...</div>
+    <div id="page-payment" class="page hidden">
+        <div class="py-20 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h1 class="text-5xl font-bold mb-6 text-center">Get Started Today</h1>
+                <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">Choose the package that fits your needs</p>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="gradient-bg p-6 text-white">
+                            <h2 class="text-2xl font-bold mb-2">AI Consultation Call</h2>
+                            <div class="text-4xl font-bold">$50</div>
+                            <p class="text-blue-100">KES 6,500 / 1 Hour</p>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-6">Get expert advice on your AI and data strategy</p>
+                            <button onclick="alert('Payment integration ready. Add your Stripe/Flutterwave keys to activate.')" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Choose Package</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
+                            <h2 class="text-2xl font-bold mb-2">AI Agent Setup</h2>
+                            <div class="text-4xl font-bold">$500</div>
+                            <p class="text-purple-100">KES 65,000 / Starter Package</p>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-6">Custom AI agent for your workflow</p>
+                            <button onclick="alert('Payment integration ready. Add your Stripe/Flutterwave keys to activate.')" class="w-full bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">Choose Package</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-privacy" class="page hidden">
+        <div class="py-20 px-4">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl font-bold mb-6">Privacy Policy</h1>
+                <p class="text-gray-600 mb-8">Last Updated: November 21, 2025</p>
+                <div class="prose max-w-none">
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">1. Introduction</h2>
+                        <p class="text-gray-700 mb-4">AxiaAnalytics is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information.</p>
+                    </section>
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">2. Information We Collect</h2>
+                        <p class="text-gray-700 mb-4">We collect information you provide directly, including name, email, organization, and messages through our contact forms.</p>
+                    </section>
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">3. How We Use Your Information</h2>
+                        <p class="text-gray-700 mb-4">We use your information to provide services, respond to inquiries, process transactions, and improve our offerings.</p>
+                    </section>
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">4. Contact Us</h2>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <p class="text-gray-700">Email: contact@axiaanalytics.com</p>
+                            <p class="text-gray-700">Phone: +254 728 702 495</p>
+                            <p class="text-gray-700">Location: Nairobi, Kenya</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-terms" class="page hidden">
+        <div class="py-20 px-4">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl font-bold mb-6">Terms of Service</h1>
+                <p class="text-gray-600 mb-8">Last Updated: November 21, 2025</p>
+                <div class="prose max-w-none">
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">1. Agreement to Terms</h2>
+                        <p class="text-gray-700 mb-4">By accessing AxiaAnalytics services, you agree to be bound by these Terms of Service.</p>
+                    </section>
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">2. Services Description</h2>
+                        <p class="text-gray-700 mb-4">AxiaAnalytics provides AI, machine learning, data engineering, business intelligence, and consultation services.</p>
+                    </section>
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">3. Payment Terms</h2>
+                        <p class="text-gray-700 mb-4">All prices are listed in USD and KES. Payment must be received before services commence.</p>
+                    </section>
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">4. Contact Information</h2>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <p class="text-gray-700">Email: contact@axiaanalytics.com</p>
+                            <p class="text-gray-700">Phone: +254 728 702 495</p>
+                            <p class="text-gray-700">Location: Nairobi, Kenya</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-gray-900 text-white py-12 px-4">
         <div class="max-w-6xl mx-auto">
@@ -591,16 +466,15 @@
                 <div>
                     <h4 class="font-bold mb-4">Services</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" onclick="showPage('services')" class="hover:text-white transition">AI Expert Consultation</a></li>
-                        <li><a href="#" onclick="showPage('services')" class="hover:text-white transition">AI Optimized Solutions</a></li>
+                        <li><a href="#" onclick="showPage('services')" class="hover:text-white transition">AI & Machine Learning</a></li>
                         <li><a href="#" onclick="showPage('services')" class="hover:text-white transition">Data Engineering</a></li>
+                        <li><a href="#" onclick="showPage('services')" class="hover:text-white transition">Business Intelligence</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-bold mb-4">Company</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" onclick="showPage('home')" class="hover:text-white transition">Home</a></li>
                         <li><a href="#" onclick="showPage('about')" class="hover:text-white transition">About Us</a></li>
                         <li><a href="#" onclick="showPage('blog')" class="hover:text-white transition">Blog</a></li>
                         <li><a href="#" onclick="showPage('contact')" class="hover:text-white transition">Contact</a></li>
@@ -614,7 +488,7 @@
                     <ul class="space-y-2 text-gray-400">
                         <li>Nairobi, Kenya</li>
                         <li><a href="tel:+254728702495" class="hover:text-white transition">+254 728 702 495</a></li>
-                        <li><a href="mailto:Axiaanalyticsglobal@gmail.com" class="hover:text-white transition">Axiaanalyticsglobal@gmail.com</a></li>
+                        <li><a href="mailto:contact@axiaanalytics.com" class="hover:text-white transition">contact@axiaanalytics.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -646,6 +520,38 @@
             }
         }
 
+        // New Accordion Toggle (Implements Request 2 Functionality)
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            // Close all other accordions and reset icons in the current section
+            const currentSection = content.closest('section');
+            const allContents = currentSection.querySelectorAll('.overflow-hidden');
+            
+            allContents.forEach(item => {
+                const itemIcon = document.getElementById('icon-' + item.id);
+                if (item.id !== id && !item.classList.contains('hidden')) {
+                    item.classList.add('hidden');
+                    if (itemIcon) {
+                        itemIcon.textContent = '+';
+                        itemIcon.classList.remove('rotate-45');
+                    }
+                }
+            });
+
+            // Toggle current accordion
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = '−'; // Minus sign
+                icon.classList.add('rotate-45');
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = '+';
+                icon.classList.remove('rotate-45');
+            }
+        }
+
         // Contact Form
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
@@ -656,46 +562,21 @@
             });
         }
 
-        // Testimonial Slider Logic
-        let currentTestimonial = 1;
-        const totalTestimonials = 6;
-
-        function showTestimonial(index) {
-            // Hide all
-            document.querySelectorAll('.testimonial-item').forEach(item => {
-                item.classList.add('hidden');
-                item.classList.remove('fade-in');
-            });
-            
-            // Show target
-            const target = document.getElementById('testimonial-' + index);
-            if (target) {
-                target.classList.remove('hidden');
-                target.classList.add('fade-in');
-            }
-
-            // Update nav dots 
-            document.querySelectorAll('#testimonial-nav button').forEach((btn, i) => {
-                if (i + 1 === index) {
-                    btn.classList.add('gold-bg');
-                    btn.classList.remove('bg-white/50');
-                } else {
-                    btn.classList.add('bg-white/50');
-                    btn.classList.remove('gold-bg');
-                }
-            });
-            currentTestimonial = index;
+        // Payment Integration Functions
+        function initStripePayment(packageType, amountUSD) {
+            alert('Stripe Payment\n\nPackage: ' + packageType + '\nAmount: $' + amountUSD + '\n\nTo activate:\n1. Get Stripe key from stripe.com\n2. Add backend endpoint\n3. Configure webhooks');
         }
 
-        // Auto-advance testimonials
-        setInterval(() => {
-            let next = (currentTestimonial % totalTestimonials) + 1;
-            showTestimonial(next);
-        }, 8000); // 8 seconds per testimonial
+        function initFlutterwavePayment(packageType, amountKES) {
+            alert('Flutterwave Payment\n\nPackage: ' + packageType + '\nAmount: KES ' + amountKES + '\n\nTo activate:\n1. Sign up at flutterwave.com\n2. Get public key\n3. Add payment callback');
+        }
+
+        function initMpesaPayment(packageType, amountKES) {
+            alert('M-PESA Payment\n\nPackage: ' + packageType + '\nAmount: KES ' + amountKES + '\n\nTo activate:\n1. Register at developer.safaricom.co.ke\n2. Or use Flutterwave for M-PESA');
+        }
 
         // Initialize
         showPage('home');
-        showTestimonial(1); // Initialize the testimonial slider on load
     </script>
 </body>
 </html>
