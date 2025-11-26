@@ -28,8 +28,7 @@
                     <button onclick="showPage('services')" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition">Services</button>
                     <button onclick="showPage('blog')" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition">Blog</button>
                     <button onclick="showPage('contact')" class="nav-link font-semibold text-gray-700 hover:text-blue-600 transition">Contact</button>
-                    <button onclick="showPage('payment')" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Get Started</button>
-                </nav>
+                    </nav>
 
                 <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-2xl">☰</button>
             </div>
@@ -40,8 +39,7 @@
                 <button onclick="showPage('services'); toggleMobileMenu()" class="block w-full text-left px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-50">Services</button>
                 <button onclick="showPage('blog'); toggleMobileMenu()" class="block w-full text-left px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-50">Blog</button>
                 <button onclick="showPage('contact'); toggleMobileMenu()" class="block w-full text-left px-4 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-50">Contact</button>
-                <button onclick="showPage('payment'); toggleMobileMenu()" class="block w-full text-left px-4 py-2 rounded-lg font-semibold bg-blue-50 text-blue-600">Get Started</button>
-            </nav>
+                </nav>
         </div>
     </header>
 
@@ -72,60 +70,46 @@
         </section>
 
         <section class="py-20 px-4 bg-gray-50">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
-                <div class="space-y-4">
-                    <div class="bg-white rounded-xl shadow-lg border border-gray-100">
-                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 hover:bg-gray-50 transition" onclick="toggleAccordion('industry-finance')">
-                            <span>Financial Services & Banking</span>
-                            <span id="icon-industry-finance" class="text-2xl transform transition-transform duration-300">+</span>
-                        </button>
-                        <div id="industry-finance" class="hidden overflow-hidden transition-all duration-500 ease-in-out">
-                            <div class="p-6 pt-0 text-gray-600">
-                                <p>Leveraging AI for fraud detection, risk modeling, and personalized customer banking experiences. Our solutions drive compliance and enhance profitability in the financial sector.</p>
-                                <ul class="list-disc pl-6 mt-4 space-y-2">
-                                    <li>Credit Risk Scoring with Machine Learning</li>
-                                    <li>Automated Anti-Money Laundering (AML) checks</li>
-                                    <li>Customer Churn Prediction</li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-4">Our Core Services</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Comprehensive AI and data solutions designed to accelerate your digital transformation journey</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-4xl mb-4">🧠</div>
+                        <h3 class="text-xl font-bold mb-3">AI & Machine Learning</h3>
+                        <p class="text-gray-600 mb-4">Custom ML models, predictive analytics, and intelligent automation</p>
+                        <button onclick="showPage('services')" class="text-blue-600 font-semibold">Learn More</button>
                     </div>
-
-                    <div class="bg-white rounded-xl shadow-lg border border-gray-100">
-                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 hover:bg-gray-50 transition" onclick="toggleAccordion('industry-logistics')">
-                            <span>Logistics & Supply Chain</span>
-                            <span id="icon-industry-logistics" class="text-2xl transform transition-transform duration-300">+</span>
-                        </button>
-                        <div id="industry-logistics" class="hidden overflow-hidden transition-all duration-500 ease-in-out">
-                            <div class="p-6 pt-0 text-gray-600">
-                                <p>Optimizing routes, managing inventory, and predicting demand to create highly efficient and resilient supply chains. We minimize operational costs through intelligent automation.</p>
-                                <ul class="list-disc pl-6 mt-4 space-y-2">
-                                    <li>Route Optimization Algorithms</li>
-                                    <li>Predictive Maintenance for Fleets</li>
-                                    <li>Warehouse Robotics Integration</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="text-xl font-bold mb-3">Data Engineering</h3>
+                        <p class="text-gray-600 mb-4">Robust data pipelines and scalable infrastructure</p>
+                        <button onclick="showPage('services')" class="text-blue-600 font-semibold">Learn More</button>
                     </div>
-
-                    <div class="bg-white rounded-xl shadow-lg border border-gray-100">
-                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 hover:bg-gray-50 transition" onclick="toggleAccordion('industry-healthcare')">
-                            <span>Healthcare & Pharma</span>
-                            <span id="icon-industry-healthcare" class="text-2xl transform transition-transform duration-300">+</span>
-                        </button>
-                        <div id="industry-healthcare" class="hidden overflow-hidden transition-all duration-500 ease-in-out">
-                            <div class="p-6 pt-0 text-gray-600">
-                                <p>Enhancing patient care, accelerating diagnostics, and streamlining administrative tasks with data science. Our solutions adhere to strict data privacy standards.</p>
-                                <ul class="list-disc pl-6 mt-4 space-y-2">
-                                    <li>AI-assisted Medical Imaging Analysis</li>
-                                    <li>Electronic Health Record (EHR) Data Analytics</li>
-                                    <li>Personalized Treatment Planning</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-4xl mb-4">📈</div>
+                        <h3 class="text-xl font-bold mb-3">Business Intelligence</h3>
+                        <p class="text-gray-600 mb-4">Interactive dashboards and real-time analytics</p>
+                        <button onclick="showPage('services')" class="text-blue-600 font-semibold">Learn More</button>
                     </div>
-
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-4xl mb-4">⚙️</div>
+                        <h3 class="text-xl font-bold mb-3">Process Automation</h3>
+                        <p class="text-gray-600 mb-4">Streamline operations with intelligent automation</p>
+                        <button onclick="showPage('services')" class="text-blue-600 font-semibold">Learn More</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-4xl mb-4">🤖</div>
+                        <h3 class="text-xl font-bold mb-3">AI Agent Workflows</h3>
+                        <p class="text-gray-600 mb-4">Custom AI agents for autonomous operations</p>
+                        <button onclick="showPage('services')" class="text-blue-600 font-semibold">Learn More</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div class="text-4xl mb-4">👥</div>
+                        <h3 class="text-xl font-bold mb-3">Expert Consultation</h3>
+                        <p class="text-gray-600 mb-4">Strategic guidance and implementation support</p>
+                        <button onclick="showPage('services')" class="text-blue-600 font-semibold">Learn More</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -141,29 +125,13 @@
             </div>
         </section>
 
-        <section class="py-20 px-4 bg-gray-100">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold mb-12">Hear From Our Clients</h2>
-                <div class="bg-white p-10 rounded-2xl shadow-xl border-t-4 border-blue-600 fade-in">
-                    <p class="text-2xl italic font-serif text-gray-700 mb-8">
-                        "AxiaAnalytics delivered a predictive model that has been a game-changer for our inventory management. The team was highly professional and the results exceeded our expectations."
-                    </p>
-                    <div class="text-right">
-                        <p class="text-xl font-bold text-gray-900">David Mwangi</p>
-                        <p class="text-md text-blue-600">Operations Director, Leading Logistics Firm</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 px-4">
+        <section class="py-20 px-4 bg-gray-50">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
                 <p class="text-xl text-gray-600 mb-8">Let's discuss how AI and data analytics can drive your next breakthrough</p>
                 <div class="flex gap-4 justify-center flex-wrap">
                     <button onclick="showPage('contact')" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition">Schedule Consultation</button>
-                    <button onclick="showPage('payment')" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition">View Packages</button>
-                </div>
+                    </div>
             </div>
         </section>
     </div>
@@ -354,41 +322,6 @@
         </div>
     </div>
 
-    <div id="page-payment" class="page hidden">
-        <div class="py-20 px-4">
-            <div class="max-w-6xl mx-auto">
-                <h1 class="text-5xl font-bold mb-6 text-center">Get Started Today</h1>
-                <p class="text-xl text-gray-600 text-center mb-16 max-w-3xl mx-auto">Choose the package that fits your needs</p>
-
-                <div class="grid md:grid-cols-2 gap-8 mb-16">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <div class="gradient-bg p-6 text-white">
-                            <h2 class="text-2xl font-bold mb-2">AI Consultation Call</h2>
-                            <div class="text-4xl font-bold">$50</div>
-                            <p class="text-blue-100">KES 6,500 / 1 Hour</p>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-gray-600 mb-6">Get expert advice on your AI and data strategy</p>
-                            <button onclick="alert('Payment integration ready. Add your Stripe/Flutterwave keys to activate.')" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Choose Package</button>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
-                            <h2 class="text-2xl font-bold mb-2">AI Agent Setup</h2>
-                            <div class="text-4xl font-bold">$500</div>
-                            <p class="text-purple-100">KES 65,000 / Starter Package</p>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-gray-600 mb-6">Custom AI agent for your workflow</p>
-                            <button onclick="alert('Payment integration ready. Add your Stripe/Flutterwave keys to activate.')" class="w-full bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">Choose Package</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div id="page-privacy" class="page hidden">
         <div class="py-20 px-4">
             <div class="max-w-4xl mx-auto">
@@ -424,26 +357,87 @@
         <div class="py-20 px-4">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-5xl font-bold mb-6">Terms of Service</h1>
-                <p class="text-gray-600 mb-8">Last Updated: November 21, 2025</p>
+                <p class="text-gray-600 mb-8">Last Updated: May 6, 2025</p>
                 <div class="prose max-w-none">
+                    <p class="text-gray-700 mb-4">Welcome to Axiaanalytics.com. These Terms of Service (“Terms”) govern your access to and use of our website, products, and services (“Services”). Please read them carefully.</p>
+
                     <section class="mb-8">
-                        <h2 class="text-2xl font-bold mb-4">1. Agreement to Terms</h2>
-                        <p class="text-gray-700 mb-4">By accessing AxiaAnalytics services, you agree to be bound by these Terms of Service.</p>
+                        <h2 class="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
+                        <p class="text-gray-700 mb-4">By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, do not use our Services.</p>
                     </section>
+
                     <section class="mb-8">
-                        <h2 class="text-2xl font-bold mb-4">2. Services Description</h2>
-                        <p class="text-gray-700 mb-4">AxiaAnalytics provides AI, machine learning, data engineering, business intelligence, and consultation services.</p>
+                        <h2 class="text-2xl font-bold mb-4">2. Use of Services</h2>
+                        <h3 class="text-xl font-bold mb-2">Eligibility</h3>
+                        <p class="text-gray-700 mb-4">You must be at least 18 years old or the age of majority in your jurisdiction to use our Services.</p>
+                        <h3 class="text-xl font-bold mb-2">License</h3>
+                        <p class="text-gray-700 mb-4">Axiaanalytics grants you a limited, non-exclusive, non-transferable, and revocable license to use the Services for personal or internal business use, in compliance with these Terms.</p>
+                        <h3 class="text-xl font-bold mb-2">Prohibited Conduct</h3>
+                        <p class="text-gray-700 mb-4">You agree not to:</p>
+                        <ul class="list-disc pl-8 text-gray-700 space-y-2">
+                            <li>Use the Services for any unlawful purpose;</li>
+                            <li>Reverse engineer or decompile any part of our Services;</li>
+                            <li>Interfere with or disrupt the integrity or performance of the Services;</li>
+                            <li>Use automated systems to access or collect data without permission.</li>
+                        </ul>
                     </section>
+
                     <section class="mb-8">
-                        <h2 class="text-2xl font-bold mb-4">3. Payment Terms</h2>
-                        <p class="text-gray-700 mb-4">All prices are listed in USD and KES. Payment must be received before services commence.</p>
+                        <h2 class="text-2xl font-bold mb-4">3. Account Registration</h2>
+                        <p class="text-gray-700 mb-4">To access certain features, you may need to create an account. You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.</p>
                     </section>
+
                     <section class="mb-8">
-                        <h2 class="text-2xl font-bold mb-4">4. Contact Information</h2>
+                        <h2 class="text-2xl font-bold mb-4">4. Intellectual Property</h2>
+                        <p class="text-gray-700 mb-4">All content and materials on the website, including text, graphics, logos, AI models, and software, are owned by or licensed to Axiaanalytics and are protected by intellectual property laws. You may not use any of our content without express written permission.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">5. Data and Privacy</h2>
+                        <p class="text-gray-700 mb-4">Your use of the Services is subject to our Privacy Policy, which describes how we collect, use, and protect your information.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">6. Third-Party Links and Services</h2>
+                        <p class="text-gray-700 mb-4">Our Services may contain links to third-party websites or services. Axiaanalytics is not responsible for the content or practices of these third parties.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">7. Disclaimers</h2>
+                        <p class="text-gray-700 mb-4">Our Services are provided “as is” and “as available” without warranties of any kind. We do not guarantee that the Services will be uninterrupted, error-free, or secure.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">8. Limitation of Liability</h2>
+                        <p class="text-gray-700 mb-4">To the fullest extent permitted by law, Axiaanalytics shall not be liable for any indirect, incidental, special, or consequential damages, or loss of data, business, or profits, arising from your use of the Services or violation of these Terms.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">9. Indemnification</h2>
+                        <p class="text-gray-700 mb-4">You agree to indemnify and hold harmless Axiaanalytics and its affiliates, officers, and employees from any claims, liabilities, damages, losses, and expenses arising from your use of the Services or violation of these Terms.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">10. Modifications to Terms</h2>
+                        <p class="text-gray-700 mb-4">We reserve the right to modify these Terms at any time. If we make material changes, we will provide notice by updating the date at the top of this page or through other means.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">11. Termination</h2>
+                        <p class="text-gray-700 mb-4">We may suspend or terminate your access to the Services at our discretion, including for violation of these Terms.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">12. Governing Law</h2>
+                        <p class="text-gray-700 mb-4">These Terms are governed by the laws of the State of [Insert Jurisdiction], without regard to conflict of laws principles.</p>
+                    </section>
+
+                    <section class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4">13. Contact Us</h2>
+                        <p class="text-gray-700 mb-4">If you have questions about these Terms, please contact us at:</p>
                         <div class="bg-gray-50 p-6 rounded-lg">
-                            <p class="text-gray-700">Email: contact@axiaanalytics.com</p>
-                            <p class="text-gray-700">Phone: +254 728 702 495</p>
-                            <p class="text-gray-700">Location: Nairobi, Kenya</p>
+                            <p class="text-gray-700">📧 Email: <a href="mailto:info@axiaanalytics.com" class="text-blue-600 hover:text-blue-800 transition">info@axiaanalytics.com</a></p>
+                            <p class="text-gray-700">🌐 Website: <a href="https://axiaanalytics.com" target="_blank" class="text-blue-600 hover:text-blue-800 transition">https://axiaanalytics.com</a></p>
                         </div>
                     </section>
                 </div>
@@ -520,38 +514,6 @@
             }
         }
 
-        // New Accordion Toggle (Implements Request 2 Functionality)
-        function toggleAccordion(id) {
-            const content = document.getElementById(id);
-            const icon = document.getElementById('icon-' + id);
-            
-            // Close all other accordions and reset icons in the current section
-            const currentSection = content.closest('section');
-            const allContents = currentSection.querySelectorAll('.overflow-hidden');
-            
-            allContents.forEach(item => {
-                const itemIcon = document.getElementById('icon-' + item.id);
-                if (item.id !== id && !item.classList.contains('hidden')) {
-                    item.classList.add('hidden');
-                    if (itemIcon) {
-                        itemIcon.textContent = '+';
-                        itemIcon.classList.remove('rotate-45');
-                    }
-                }
-            });
-
-            // Toggle current accordion
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.textContent = '−'; // Minus sign
-                icon.classList.add('rotate-45');
-            } else {
-                content.classList.add('hidden');
-                icon.textContent = '+';
-                icon.classList.remove('rotate-45');
-            }
-        }
-
         // Contact Form
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
@@ -562,18 +524,7 @@
             });
         }
 
-        // Payment Integration Functions
-        function initStripePayment(packageType, amountUSD) {
-            alert('Stripe Payment\n\nPackage: ' + packageType + '\nAmount: $' + amountUSD + '\n\nTo activate:\n1. Get Stripe key from stripe.com\n2. Add backend endpoint\n3. Configure webhooks');
-        }
-
-        function initFlutterwavePayment(packageType, amountKES) {
-            alert('Flutterwave Payment\n\nPackage: ' + packageType + '\nAmount: KES ' + amountKES + '\n\nTo activate:\n1. Sign up at flutterwave.com\n2. Get public key\n3. Add payment callback');
-        }
-
-        function initMpesaPayment(packageType, amountKES) {
-            alert('M-PESA Payment\n\nPackage: ' + packageType + '\nAmount: KES ' + amountKES + '\n\nTo activate:\n1. Register at developer.safaricom.co.ke\n2. Or use Flutterwave for M-PESA');
-        }
+        // Removed: Payment Integration Functions
 
         // Initialize
         showPage('home');
